@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy, useState } from "react";
+import PotraitComponent from "./PotraitComponent.js";
+import LoadingComponent from "./LoadingComponent.js";
+const ParallaxComponent = lazy(() => import("./ParallaxComponent.js"));
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const ApplicationMode = () => {
+  const [potrait, setPotrait] = useState(
+    window.screen.orientation === "portrait-primary" ||
+      window.screen.availWidth < window.screen.availHeight
   );
-}
+  console.log(potrait);
+  window.onload = () => {
+    window.screen.orientation.type === "portrait-primary"
+      ? setPotrait(true)
+      : setPotrait(false);
+  };
+  window.screen.orientation.onchange = (e) => {
+    e.target.type === "portrait-primary" ? setPotrait(true) : setPotrait(false);
+  };
+  return potrait ? (
+    <PotraitComponent />
+  ) : (
+    <Suspense fallback={<LoadingComponent />}>
+      {" "}
+      <ParallaxComponent />
+    </Suspense>
+  );
+};
 
-export default App;
+export default function App() {
+  return <ApplicationMode />;
+}
