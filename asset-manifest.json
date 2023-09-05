@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/static/js/main.c694f5ae.js",
+    "static/js/165.b649e7b0.chunk.js": "/static/js/165.b649e7b0.chunk.js",
+    "static/js/615.ec22f8ca.chunk.js": "/static/js/615.ec22f8ca.chunk.js",
+    "static/media/Page1.png": "/static/media/Page1.f2ba3076cebf5fd9c4d0.png",
+    "static/media/Page2-1.png": "/static/media/Page2-1.3342219c482aa74cd658.png",
+    "static/media/Netflix.jpg": "/static/media/Netflix.dc7d3cf5a3ed70746c8f.jpg",
+    "static/media/Potrait Gif.gif": "/static/media/Potrait Gif.f4fa421e95e65da738d7.gif",
+    "static/media/Page3-1.png": "/static/media/Page3-1.0a3f88edacf683d771f2.png",
+    "static/media/LMS.jpg": "/static/media/LMS.a6d61d996ba07a75a627.jpg",
+    "static/media/Page4-1.png": "/static/media/Page4-1.7155b56749c335ac2d4f.png",
+    "static/media/myself.jpg": "/static/media/myself.9b97d46d757f8be64ade.jpg",
+    "index.html": "/index.html",
+    "main.c694f5ae.js.map": "/static/js/main.c694f5ae.js.map",
+    "165.b649e7b0.chunk.js.map": "/static/js/165.b649e7b0.chunk.js.map",
+    "615.ec22f8ca.chunk.js.map": "/static/js/615.ec22f8ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c694f5ae.js"
+  ]
+}
